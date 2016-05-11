@@ -24,7 +24,7 @@ Homework: Multidimensional Arrays
 
 ### Problem List
 
-1. [Fill the matrix](./FillТheMatrix)
+1. [Fill the matrix](./FillTheMatrix)
 1. [Maximal sum](./MaximalSum)
 1. [Sequence in matrix](./SequencenMatrix)
 1. [Binary search](./BinarySearch)
