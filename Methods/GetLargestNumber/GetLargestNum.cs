@@ -19,48 +19,32 @@ namespace GetLargestNumber
         static void Main()
         {
             string input = Console.ReadLine();
-            GetMax(input);
+
+            //var entities = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); // splits string with whitespaces into string[]
+            //var numbers = entities.Select(x => ulong.Parse(x)).ToArray(); // converts string[] to int[]
+            var numbers = input.Split(' ').Select(s => int.Parse(s)).ToArray();
+
+            int a = (int)numbers[0];
+            int b = (int)numbers[1];
+            int c = (int)numbers[2];
+
+            //int greaterAB = GetMax(a, b);
+            //int result = GetMax(c, greaterAB);
+
+            Console.WriteLine(GetMax(c, GetMax(a, b)));
         }
 
-        public static void GetMax(string input)
+        public static int GetMax(int n, int m)
         {
-            //input = Console.ReadLine();
+            //int max = Math.Max(n, m);
+            int max = n;
 
-            var entities = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); // splits string with whitespaces into string[]
-            var numbers = entities.Select(x => ulong.Parse(x)).ToArray(); // converts string[] to int[]
-
-            //int max = 0;
-            var max = numbers[0];
-            var b = numbers[1];
-            var c = numbers[2];
-
-            if (b > max)
+            if (m > n)
             {
-                max = b;
-            }
-            else if (c > max)
-            {
-                max = c;
+                max = m;
             }
 
-            //var maxAB = Math.Max(a, b);
-            //var maxABC = Math.Max(maxAB, c);
-
-            //for (int index = 0; index < numbers.Length; index++)
-            //{
-            //    
-            //
-            //    //while (numbers[index] > numbers[index + 1])
-            //    //{
-            //    //     max = numbers[index];
-            //    //}
-            //}
-
-            Console.WriteLine(max);
-            //return; - за void методи
-
-            //return + value; -за всички др методи
-
+            return max;
         }
     }
 }
