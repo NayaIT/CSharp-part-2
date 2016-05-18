@@ -24,7 +24,7 @@ namespace MaximalSum
         static void Main()
         {
             string input = Console.ReadLine();
- 
+
             var entities = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries); // splits string with whitespaces into string[]
             var numbers = entities.Select(x => ulong.Parse(x)).ToArray(); // converts string[] to int[] or //input.Split(' ').Select(z => Convert.ToInt32(z)).ToArray();
 
@@ -36,7 +36,7 @@ namespace MaximalSum
             //int[] elements = new int[n * m];
 
             FillTheElementsInMatrix(matrix, n);
-            FindMaxSum(matrix);          
+            FindMaxSum(matrix);
         }
 
         /// <summary>
@@ -75,8 +75,8 @@ namespace MaximalSum
                 for (int col = 0; col < mat.GetLength(1) - 2; col++)
                 {
                     sum = mat[row, col] + mat[row, col + 1] + mat[row, col + 2]
-                            + mat[row + 1, col] + mat[row + 2, col] + mat[row + 1, col + 1] + mat[row + 2, col + 2]
-                            + mat[row + 1, col + 2] + mat[row + 2, col + 1];
+                          + mat[row + 1, col] + mat[row + 1, col + 1] + mat[row + 1, col + 2]
+                          + mat[row + 2, col] + mat[row + 2, col + 2] + mat[row + 2, col + 1];
 
                     if (sum > maxSum)
                     {

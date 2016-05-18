@@ -13,15 +13,29 @@ Constraints
  */
 
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Numerics;
 
 namespace NFactorial
 {
     class NFact
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            int n = int.Parse(Console.ReadLine());
+
+            Console.WriteLine(CalculateNFactorial(n));
+        }
+
+        private static BigInteger CalculateNFactorial(int n)
+        {
+            BigInteger factorial = 1;
+
+            for (int i = 1; i <= n; i++)
+            {
+                factorial *= i;
+            }
+
+            return factorial;
         }
     }
 }

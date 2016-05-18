@@ -109,7 +109,7 @@ namespace FillTheMatrix
                         index++;
                     }
                 }
-                
+
             }
         }
 
@@ -260,6 +260,6 @@ namespace FillTheMatrix
 
                 Console.WriteLine();
             }
-        }  
+        }
     }
 }
