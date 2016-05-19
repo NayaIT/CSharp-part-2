@@ -21,8 +21,12 @@ namespace TriangleSurfaceBySideAndAltitude
     {
         static void Main()
         {
-            int side = int.Parse(Console.ReadLine());
-            int altitude = int.Parse(Console.ReadLine());
+            double side = double.Parse(Console.ReadLine());
+            double altitude = double.Parse(Console.ReadLine());
+
+            var surface = (side * altitude) / 2;
+
+            Console.WriteLine("{0:F2}", surface);
         }
     }
 }

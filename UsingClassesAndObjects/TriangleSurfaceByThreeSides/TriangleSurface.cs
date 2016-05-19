@@ -21,9 +21,14 @@ namespace TriangleSurfaceByThreeSides
     {
         static void Main()
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double c = double.Parse(Console.ReadLine());
+
+            var p = (a + b + c) / 2;
+            var surface = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+
+            Console.WriteLine("{0:F2}", surface);
         }
     }
 }

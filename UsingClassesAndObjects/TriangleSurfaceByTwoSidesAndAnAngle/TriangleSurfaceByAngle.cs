@@ -23,9 +23,13 @@ namespace TriangleSurfaceByTwoSidesAndAnAngle
     {
         static void Main()
         {
-            int a = int.Parse(Console.ReadLine());
-            int b = int.Parse(Console.ReadLine());
-            int c = int.Parse(Console.ReadLine());
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double angle = Math.PI / 180 * double.Parse(Console.ReadLine());
+
+            var surface = (a * b * Math.Sin(angle)) / 2;
+
+            Console.WriteLine("{0:F2}", surface);
         }
     }
 }
