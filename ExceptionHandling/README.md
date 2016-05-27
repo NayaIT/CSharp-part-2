@@ -3,7 +3,7 @@ What are exceptions? Handling exceptions. The `System.Exception` class. Exceptio
 
 ## Resources
 
-##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides
+##### [<img src="https://raw.githubusercontent.com/TelerikAcademy/Common/master/icons/presentation.png" height="15" />Slides](https://rawgit.com/TelerikAcademy/CSharp-Part-2/master/Topics/07.%20Exception-Handling/slides/index.html)
 
 ### Table of Contents
 - What are Exceptions?
