@@ -18,6 +18,7 @@ aaaaabbbbbcdddeeeedssaa	abcdedsa
  */
 
 using System;
+using System.Text;
 
 namespace SeriesOfLetters
 {
@@ -25,6 +26,23 @@ namespace SeriesOfLetters
     {
         static void Main()
         {
+            var text = Console.ReadLine().Trim();
+            var output = new StringBuilder();
+
+            for (int i = 0; i < text.Length; i++)
+            {
+                var letter = text[i];
+                output.Append(letter);
+
+                while (i < text.Length && text[i] == letter)
+                {
+                    i++;
+                }
+
+                i--;
+            }
+
+            Console.WriteLine(output);
         }
     }
 }

@@ -14,13 +14,26 @@ String length will be <= 10000
  */
 
 using System;
+using System.Text.RegularExpressions;
 
 namespace ParseTags
 {
     class ParseTag
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            string input = Console.ReadLine();
+
+            Console.WriteLine(ParseTags(input));
+        }
+
+        private static string ParseTags(string input)
+        {
+            string output = string.Empty;
+
+            output = Regex.Replace(input, "<upcase>(.*?)</upcase>", word => word.Groups[1].Value.ToUpper());
+
+            return output;
         }
     }
 }

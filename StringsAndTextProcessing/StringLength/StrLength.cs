@@ -18,8 +18,41 @@ namespace StringLength
 {
     class StrLength
     {
-        static void Main(string[] args)
+        static void Main()
         {
+
+            var input = Console.ReadLine().Replace(@"\", string.Empty);
+            Console.WriteLine(input.Length == 20 ? input : input.PadRight(20, '*'));
         }
     }
 }
+
+/*
+
+        static void Main()
+        {
+            string input = Console.ReadLine();
+
+            Console.WriteLine(ApendElements(input));
+        }
+
+        private static StringBuilder ApendElements(string input)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(input);
+
+            //input.PadRight(20, '*'));
+
+            for (int i = input.Length; i < 20; i++)
+            {
+                //sb.Append('*'); 
+
+                //if (input.Length < 20)
+                //{
+                //    sb.Append('*');
+                //}
+            }
+
+            return sb;
+        }
+*/

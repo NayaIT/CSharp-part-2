@@ -20,8 +20,27 @@ namespace SubStringInText
 {
     class SubStringTxt
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            string subStr = Console.ReadLine();
+            string input = Console.ReadLine();
+
+            Console.WriteLine(SubStringCounter(subStr, input));
+        }
+
+        private static int SubStringCounter(string subStr, string input)
+        {
+            int counter = 0;
+
+            for (int i = 0; i <= input.Length - subStr.Length; i++)
+            {
+                if (input.Substring(i, subStr.Length).Equals(subStr, StringComparison.InvariantCultureIgnoreCase)) // case insensitive
+                {
+                    counter++;
+                }
+            }
+
+            return counter;
         }
     }
 }

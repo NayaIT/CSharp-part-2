@@ -11,18 +11,35 @@ Print the string in C# Unicode character literals on a single line
 Constraints
 Time limit: 0.1s
  */
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace UnicodeCharacters
+using System;
+using System.Text;
+
+class UnicodeCharacters
 {
-    class UnicodeChar
+    static void Main()
     {
-        static void Main(string[] args)
+        string input = Console.ReadLine();
+
+        StringBuilder answer = new StringBuilder();
+        
+        for (int i = 0; i < input.Length; i++)
         {
+            answer.AppendFormat("\\u{0:X4}", (int)input[i]);
         }
+
+        Console.WriteLine(answer.ToString());
     }
 }
+
+/*
+    var input = Console.ReadLine();
+    var sb = new StringBuilder();
+
+    foreach (var letter in input)
+    {
+        sb.AppendFormat(@"\u{0:x4}", (int)letter);
+    }
+
+    Console.WriteLine(sb);
+*/

@@ -21,6 +21,36 @@ namespace CorrectBrackets
     {
         static void Main()
         {
+            string input = Console.ReadLine();
+
+            Console.WriteLine(CheckForCorrectBrackets(input));
+        }
+
+        private static string CheckForCorrectBrackets(string input)
+        {
+            
+            bool isCorrect = true;
+            int openBracketCounter = 0;
+            int closeBracketCounter = 0;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] == '(')
+                {
+                    openBracketCounter++;
+                }
+                else if (input[i] == ')')
+                {
+                    closeBracketCounter++;
+                }             
+            }
+
+            if (openBracketCounter != closeBracketCounter)
+            {
+                isCorrect = false;
+            }
+
+            return (isCorrect ? "Correct" : "Incorrect");
         }
     }
 }
